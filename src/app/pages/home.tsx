@@ -13,7 +13,7 @@ const Home = () => {
     return (
         <>
             <main>
-                <div className='md:w-2/4 md:fixed left-20 top-20 text-[#e5e7eb] flex items-start justify-between flex-col z-50 mb-5' >
+                <div className='md:w-2/4 md:fixed left-20 top-20 text-[#e5e7eb] flex items-start justify-between flex-col z-20 mb-5' >
                     <div className='space-y-2' >
                         <div className='' >
                             <h1 className='md:text-5xl text-2xl font-bold' >Igor Wallace</h1>
@@ -53,7 +53,7 @@ const Home = () => {
                     </div>
                 </div>
 
-                <div className='flex items-end justify-center flex-col text-white w-full relative md:gap-10 gap-5' >
+                <div className='flex items-end justify-center flex-col text-white w-full relative md:gap-10 gap-5 z-20' >
                     <div className='md:w-2/4 text-[var(--cinza)] md:flex items-center justify-center md:min-h-[70vh] my-5' >
                         <About />
                     </div>
