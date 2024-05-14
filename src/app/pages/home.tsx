@@ -13,7 +13,7 @@ const Home = () => {
     return (
         <>
             <main>
-                <div className='md:w-2/4 md:fixed left-20 top-20 text-[#e5e7eb] flex items-start justify-between flex-col z-50' >
+                <div className='md:w-2/4 md:fixed left-20 top-20 text-[#e5e7eb] flex items-start justify-between flex-col z-50 mb-5' >
                     <div className='space-y-2' >
                         <div className='' >
                             <h1 className='md:text-5xl text-2xl font-bold' >Igor Wallace</h1>

@@ -6,10 +6,13 @@ import React, { useEffect, useState } from 'react'
 //firebase
 import { db } from '../firebase/firebaseConfig';
 import { collection, getDocs } from "firebase/firestore";
+import Project_single from './componentes_projects/project_single';
 
 const Projects = () => {
 
     const [projectList, setProjectList] = useState<any[]>([])
+    const [isProjectSingle, setIsProjectSingle] = useState<boolean>(false)
+    const [sendProject, setSendProject] = useState<any[]>([])
 
     useEffect(() => {
         const bancoProject = async () => {
@@ -20,18 +23,24 @@ const Projects = () => {
         bancoProject()
     }, [])
 
+    const handleProjectSingle = (project:any[]) => {
+        setSendProject(project)
+        setIsProjectSingle(true)
+    }
+
 
     return (
+        <>
         <div>
-            <h1 className='mb-5' >Meus Projetos</h1>
+            <h1 className='mb-3' >Meus Projetos</h1>
             <div className='grid grid-cols-2 gap-3' >
                 {
                     projectList.map((project: any, index: any) => (
-                        <div key={index} >
-                            <div className='hover:scale-[1.01] duration-200 cursor-pointer relative z-10 bg-transparent' >
+                        <button key={index} onClick={()=>handleProjectSingle(project)}  >
+                            <div className='hover:scale-[1.01] duration-200 relative z-10 bg-transparent'>
                                 <Image
                                     className={`rounded-xl`}
-                                    src={project.gif}
+                                    src={project.imgUrl}
                                     alt={project.title}
                                     width={300}
                                     height={300}
@@ -41,11 +50,17 @@ const Projects = () => {
                                     <p className='md:text-sm text-xs font-medium' >{project.summary}</p>
                                 </div>
                             </div>
-                        </div>
+                        </button>
                     ))
                 }
             </div>
         </div>
+        <Project_single 
+            setIsProjectSingle={setIsProjectSingle} 
+            isProjectSingle={isProjectSingle}
+            sendProject={sendProject}
+            />
+        </>
     )
 }
 
