@@ -20,7 +20,7 @@ const Home = () => {
                         </div>
                         <div>
                             <h3 className='md:text-lg text-base' >Desenvolvedor Front-End</h3>
-                            <h1 className='md:text-sm text-xs text-[var(--cinza)] max-w-[70%]' >Dou vida à projetos, construindo coisas legais online.</h1>
+                            <h1 className='md:text-sm text-xs text-[var(--cinza)] max-w-[70%]' >Dou vida à projetos, construindo coisas legais na internet.</h1>
                         </div>
                     </div>
                     <div className='hidden md:block md:my-32 my-5 md:text-base text-sm text-[var(--cinza)]' >
@@ -53,8 +53,8 @@ const Home = () => {
                     </div>
                 </div>
 
-                <div className='flex items-end justify-start flex-col text-white w-full relative md:gap-10 gap-5' >
-                    <div className='md:w-2/4 text-[var(--cinza)] flex items-center justify-center h-[70vh] md:h-[80vh]' >
+                <div className='flex items-end justify-center flex-col text-white w-full relative md:gap-10 gap-5' >
+                    <div className='md:w-2/4 text-[var(--cinza)] md:flex items-center justify-center md:min-h-[70vh] my-5' >
                         <About />
                     </div>
 

@@ -4,10 +4,10 @@ const About = () => {
     return (
         <>
             <div className='' >
-                <p className='text-justify md:text-base text-sm' >
-                    meu nome é <span className='text-white' >Igor Wallace</span>, tenho 18 anos. apaixonado por tecnologias e
-                    por dar a vida a projetos do zero. em 2023, decici me tornar um desenvolvedor,
-                    motivado por variás sugestões do <span className='text-white' >meu pai</span>. desde então, tenho me dedicado,
+                <p className='text-justify md:text-[15px] text-sm' >
+                    meu nome é <span className='text-white' >Igor Wallace</span>, tenho 18 anos. apaixonado por tecnologia e
+                    por dar a vida a projetos. em 2023, decidi me tornar desenvolvedor,
+                    motivado por várias sugestões do <span className='text-white' >meu pai</span>. desde então, tenho me dedicado,
                     buscando aprimorar meus conhecimentos e habilidades na área.
                     <br></br>
                     <br></br>
