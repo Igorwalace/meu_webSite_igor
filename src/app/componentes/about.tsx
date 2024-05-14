@@ -7,7 +7,7 @@ const About = () => {
                 <p className='text-justify md:text-base text-sm' >
                     meu nome é <span className='text-white' >Igor Wallace</span>, tenho 18 anos. apaixonado por tecnologias e
                     por dar a vida a projetos do zero. em 2023, decici me tornar um desenvolvedor,
-                    motivado por variás sugestões de meu pai. desde então, tenho me dedicado,
+                    motivado por variás sugestões do <span className='text-white' >meu pai</span>. desde então, tenho me dedicado,
                     buscando aprimorar meus conhecimentos e habilidades na área.
                     <br></br>
                     <br></br>
