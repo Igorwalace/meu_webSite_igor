@@ -32,7 +32,7 @@ const Project_single = ({ isProjectSingle, setIsProjectSingle, sendProject }: Pr
                         <div className="text-white" >
                             <div className="flex items-center justify-between border-b-[1px] border-b-[var(--cinza)] pb-5" >
 
-                                <button onClick={()=>setIsProjectSingle(false)} className='hover:scale-105 duration-200' ><IoArrowBack size={20} /></button>
+                                <button onClick={() => setIsProjectSingle(false)} className='hover:scale-105 duration-200 outline-none' ><IoArrowBack size={20} /></button>
                                 <Link href={sendProject.url} target='_blank' className="hover:scale-105 duration-200 hover:text-[#fbf2f2] text-base flex items-center justify-center gap-1" >
                                     Projeto
                                     <span><LuExternalLink /></span>
@@ -49,13 +49,24 @@ const Project_single = ({ isProjectSingle, setIsProjectSingle, sendProject }: Pr
                             </div>
 
                             <div className="py-3">
-                                <Image
-                                    className='w-full h-full rounded-md'
-                                    src={sendProject.gif}
-                                    alt={sendProject.title}
-                                    width={300}
-                                    height={300}
-                                />
+                                {
+                                    sendProject.gif ?
+                                        <Image
+                                            className='w-full h-full rounded-md'
+                                            src={sendProject.gif}
+                                            alt={sendProject.title}
+                                            width={300}
+                                            height={300}
+                                        />
+                                        :
+                                        <Image
+                                            className='w-full h-full rounded-md'
+                                            src={sendProject.imgUrl}
+                                            alt={sendProject.title}
+                                            width={300}
+                                            height={300}
+                                        />
+                                }
                             </div>
 
                             <div className="py-3" >

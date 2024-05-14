@@ -40,7 +40,7 @@ const Projects = () => {
                             <div className='hover:scale-[1.01] duration-200 relative z-10 bg-transparent'>
                                 <Image
                                     className={`rounded-xl`}
-                                    src={project.gif}
+                                    src={project.imgUrl}
                                     alt={project.title}
                                     width={300}
                                     height={300}
