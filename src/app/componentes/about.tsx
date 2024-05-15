@@ -4,6 +4,9 @@ const About = () => {
     return (
         <>
             <div className='' >
+                <div className="py-3" >
+                    <h1 className="md:text-base text-sm" >Sobre mim</h1>
+                </div>
                 <p className='text-justify md:text-[15px] text-sm' >
                     meu nome é <span className='text-white' >Igor Wallace</span>, tenho 18 anos. apaixonado por tecnologia e
                     por dar a vida a projetos. em 2023, decidi me tornar desenvolvedor,

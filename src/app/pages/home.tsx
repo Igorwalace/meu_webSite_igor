@@ -30,6 +30,19 @@ const Home = () => {
     return (
         <>
             <main ref={scrollRef} >
+
+                <div className={`bg-[rgba(173,184,239,0.5)] duration-200 md:hidden md:static fixed ${scrollYPosition > 20 ? 'top-0' : '-top-96'} left-0 right-0 flex items-center justify-start z-40 p-2 pl-7 text-white`} >
+                    {
+                        scrollYPosition > 719 ? (
+                            <h1>Contato</h1>
+                        ) : scrollYPosition >= 260 ? (
+                            <h1>Projetos</h1>
+                        ) : (
+                            <h1>Sobre</h1>
+                        )
+                    }
+                </div>
+
                 <div className='md:w-2/4 md:fixed left-20 top-20 text-[#e5e7eb] flex items-start justify-between flex-col z-20 mb-5' >
                     <div className='space-y-2' >
                         <div className='' >
@@ -45,49 +58,49 @@ const Home = () => {
                             <p className={`${scrollYPosition < 260 ? 'bg-white w-14' : 'w-10 bg-[var(--cinza)]'} duration-200 h-[1px]`} ></p>
                             <span>sobre</span>
                         </div>
-                        <div className={`flex items-center justify-start gap-1 ${scrollYPosition >= 260 && scrollYPosition <= 699 && 'text-white'}`} >
-                        <p className={`${scrollYPosition >= 260 && scrollYPosition <= 699 ? 'bg-white w-14' : 'w-10 bg-[var(--cinza)]'} duration-200 h-[1px]`} ></p>
-                        <span>projetos</span>
+                        <div className={`flex items-center justify-start gap-1 ${scrollYPosition >= 260 && scrollYPosition <= 719 && 'text-white'}`} >
+                            <p className={`${scrollYPosition >= 260 && scrollYPosition <= 719 ? 'bg-white w-14' : 'w-10 bg-[var(--cinza)]'} duration-200 h-[1px]`} ></p>
+                            <span>projetos</span>
+                        </div>
+                        <div className={`flex items-center justify-start gap-1 ${scrollYPosition > 719 && 'text-white'}`} >
+                            <p className={`${scrollYPosition > 719 ? 'bg-white w-14' : 'w-10 bg-[var(--cinza)]'} duration-200 h-[1px]`} ></p>
+                            <span>contato</span>
+                        </div>
                     </div>
-                    <div className={`flex items-center justify-start gap-1 ${scrollYPosition > 699 && 'text-white'}`} >
-                        <p className={`${scrollYPosition > 699 ? 'bg-white w-14' : 'w-10 bg-[var(--cinza)]'} duration-200 h-[1px]`} ></p>
-                        <span>contato</span>
+                    <div className='flex items-center justify-center gap-3 text-[var(--cinza)] md:m-0 mt-5' >
+                        <Link href='https://github.com/Igorwalace' target="_blank" className='hover:text-white hover:scale-105 duration-200 cursor-pointer' >
+                            <FaGithub size={30} />
+                        </Link>
+                        <Link href='https://www.linkedin.com/in/igor-wallace-03b9482a7/' target='_blank' className='hover:text-white hover:scale-105 duration-200 cursor-pointer' >
+                            <FaLinkedin size={30} />
+                        </Link>
+                        <Link href='mailto:igorwallacy3@gmail.com' target='_blank' className='hover:text-white hover:scale-105 duration-200 cursor-pointer' >
+                            <MdEmail size={30} />
+                        </Link>
+                        <Link href='https://www.instagram.com/igor_walace/' target='_blank' className='hover:text-white hover:scale-105 duration-200 cursor-pointer' >
+                            <FaInstagram size={30} />
+                        </Link>
                     </div>
                 </div>
-                <div className='flex items-center justify-center gap-3 text-[var(--cinza)] md:m-0 mt-5' >
-                    <Link href='https://github.com/Igorwalace' target="_blank" className='hover:text-white hover:scale-105 duration-200 cursor-pointer' >
-                        <FaGithub size={30} />
-                    </Link>
-                    <Link href='https://www.linkedin.com/in/igor-wallace-03b9482a7/' target='_blank' className='hover:text-white hover:scale-105 duration-200 cursor-pointer' >
-                        <FaLinkedin size={30} />
-                    </Link>
-                    <Link href='mailto:igorwallacy3@gmail.com' target='_blank' className='hover:text-white hover:scale-105 duration-200 cursor-pointer' >
-                        <MdEmail size={30} />
-                    </Link>
-                    <Link href='https://www.instagram.com/igor_walace/' target='_blank' className='hover:text-white hover:scale-105 duration-200 cursor-pointer' >
-                        <FaInstagram size={30} />
-                    </Link>
-                </div>
-            </div>
 
-            <div className='flex items-end justify-center flex-col text-white w-full relative md:gap-10 gap-5 z-20' >
-                <div className='md:w-2/4 text-[var(--cinza)] md:flex items-center justify-center md:min-h-[70vh] my-5' >
-                    <About />
+                <div className='flex items-end justify-center flex-col text-white w-full relative md:gap-10 gap-5 z-20' >
+                    <div className='md:w-2/4 text-[var(--cinza)] md:flex items-center justify-center md:min-h-[70vh] my-5' >
+                        <About />
+                    </div>
+
+                    <div className='md:w-2/4 w-full text-[var(--cinza)] flex' >
+                        <Projects />
+                    </div>
+
+                    <div className='md:w-2/4 text-[var(--cinza)] md:flex items-center justify-start my-5' >
+                        <Contact />
+                    </div>
+
                 </div>
 
-                <div className='md:w-2/4 w-full text-[var(--cinza)] flex' >
-                    <Projects />
-                </div>
-
-                <div className='md:w-2/4 text-[var(--cinza)] md:flex items-center justify-start my-5' >
-                    <Contact />
-                </div>
-
-            </div>
 
 
-
-        </main >
+            </main >
         </>
     )
 }
