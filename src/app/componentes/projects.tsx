@@ -16,6 +16,8 @@ const Projects = () => {
     const [isProjectSingle, setIsProjectSingle] = useState<boolean>(false)
     const [sendProject, setSendProject] = useState<any[]>([])
 
+    const loading = [1, 2, 3, 4, 5, 6]
+
     useEffect(() => {
         const bancoProject = async () => {
             const querySnapshot = await getDocs(collection(db, "projetos"));
@@ -33,11 +35,26 @@ const Projects = () => {
 
     return (
         <>
-            <div>
+            <div className='w-full' >
                 <h1 className="md:text-base text-sm mb-3 text-white" >Meus Projetos</h1>
-                <div className='grid grid-cols-2 gap-3' >
+                <div className='grid grid-cols-2 gap-3 w-full' >
                     {
-                        projectList.length < 1 && <><h1>carregando</h1></>
+                        projectList.length < 1 &&
+                        loading
+                            .slice(0, 3)
+                            .map((number: number, index: any) => (
+                                <>
+                                    <div
+                                        className='flex flex-col items-center justify-center gap-2 w-full'
+                                        key={index}
+                                    >
+                                        <div className='md:h-[140px] w-full h-[100px] rounded-xl bg-slate-100 flex items-center justify-center' id='imageLoading'>
+                                            <span className="loader"></span>
+                                        </div>
+                                        <div className='md:h-[30px] w-full h-[20px] rounded-xl bg-slate-100 text-black flex justify-center items-center' id='imageLoading'>Carregando projeto..</div>
+                                    </div>
+                                </>
+                            ))
                     }
                     {
                         projectList.map((project: any, index: any) => (
