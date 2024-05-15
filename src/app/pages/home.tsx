@@ -90,7 +90,7 @@ const Home = () => {
                         <Projects />
                     </div>
 
-                    <div className='md:w-2/4 w-full text-[var(--cinza)] flex items-center justify-center my-5' >
+                    <div className='md:w-2/4 w-full text-[var(--cinza)] flex items-center justify-center mt-5' >
                         <Contact />
                     </div>
                 </div>
