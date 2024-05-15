@@ -1,6 +1,14 @@
+//react
 import type { Metadata } from "next";
+
+//fonts
 import { Poppins } from "next/font/google";
+
+//css
 import "./globals.css";
+
+//shadcn 
+import { Toaster } from "@/components/ui/toaster"
 
 const poppins = Poppins({ subsets: ["latin"], weight: '400' });
 
@@ -19,7 +27,10 @@ export default function RootLayout({
       <head>
         <link rel="icon" href='/icon.png' />
       </head>
-      <body className={`${poppins.className} bg-[var(--blue)] `}>{children}</body>
+      <body className={`${poppins.className} bg-[var(--blue)] `}>
+        {children}
+        <Toaster />
+      </body>
     </html>
   );
 }
