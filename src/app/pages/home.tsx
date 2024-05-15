@@ -21,7 +21,6 @@ const Home = () => {
         const updateScrollPosition = () => {
             const scrollY = window.scrollY || document.documentElement.scrollTop; 
             setScrollYPosition(scrollY);
-            console.log(scrollYPosition)
         };
         window.addEventListener('scroll', updateScrollPosition);
         return () => window.removeEventListener('scroll', updateScrollPosition);
@@ -30,7 +29,7 @@ const Home = () => {
     return (
         <>
             <main ref={scrollRef} >
-                <div className={`bg-[rgba(173,184,239,0.5)] duration-200 md:hidden md:static fixed ${scrollYPosition > 20 ? 'top-0' : '-top-96'} left-0 right-0 flex items-center justify-start z-40 p-2 pl-7 text-white`} >
+                <div className={`backdrop-blur-sm duration-200 md:hidden md:static fixed ${scrollYPosition > 20 ? 'top-0' : '-top-96'} left-0 right-0 flex items-center justify-start z-40 p-2 pl-7 text-white`} >
                     {
                         scrollYPosition > 719 ? (
                             <h1>Contato</h1>
@@ -91,7 +90,7 @@ const Home = () => {
                         <Projects />
                     </div>
 
-                    <div className='md:w-2/4 text-[var(--cinza)] md:flex items-center justify-start my-5' >
+                    <div className='md:w-2/4 w-full text-[var(--cinza)] flex items-center justify-center my-5' >
                         <Contact />
                     </div>
                 </div>

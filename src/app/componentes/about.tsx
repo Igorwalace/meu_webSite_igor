@@ -4,8 +4,8 @@ const About = () => {
     return (
         <>
             <div className='' >
-                <div className="py-3" >
-                    <h1 className="md:text-base text-sm" >Sobre mim</h1>
+                <div className="pb-3" >
+                    <h1 className="md:text-base text-sm text-white" >Sobre mim</h1>
                 </div>
                 <p className='text-justify md:text-[15px] text-sm' >
                     meu nome é <span className='text-white' >Igor Wallace</span>, tenho 18 anos. apaixonado por tecnologia e
@@ -27,7 +27,7 @@ const About = () => {
                     (de forma independente), <span className='text-white' >jogando</span> ou até mesmo <span className='text-white' >bagunçando meu quarto</span>.
                     <br></br>
                     <br></br>
-                    Se você possui alguma ideia, algum projeto para tirar do papel ou deseja apenas me avisar um olá, estou <span className='text-white' >sempre</span> aberto á conversas.
+                    se você possui alguma ideia, algum projeto para tirar do papel ou deseja apenas me avisar um olá, estou <span className='text-white' >sempre</span> aberto á conversas.
                 </p>
             </div>
         </>

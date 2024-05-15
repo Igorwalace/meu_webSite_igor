@@ -34,7 +34,7 @@ const Projects = () => {
     return (
         <>
             <div>
-                <h1 className="md:text-base text-sm mb-3" >Meus Projetos</h1>
+                <h1 className="md:text-base text-sm mb-3 text-white" >Meus Projetos</h1>
                 <div className='grid grid-cols-2 gap-3' >
                     {
                         projectList.length < 1 && <><h1>carregando</h1></>
