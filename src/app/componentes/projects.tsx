@@ -6,6 +6,8 @@ import React, { useEffect, useState } from 'react'
 //firebase
 import { db } from '../firebase/firebaseConfig';
 import { collection, getDocs } from "firebase/firestore";
+
+//pages
 import Project_single from './componentes_projects/project_single';
 
 const Projects = () => {

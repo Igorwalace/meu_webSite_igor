@@ -1,16 +1,14 @@
 'use client'
-
 //shadcn
 import {
     Sheet,
     SheetContent,
     SheetDescription,
 } from "@/components/ui/sheet"
-import Image from "next/image"
 
 //react
+import Image from "next/image"
 import Link from "next/link"
-import { useRouter } from "next/navigation"
 
 //icons
 import { IoArrowBack } from "react-icons/io5"

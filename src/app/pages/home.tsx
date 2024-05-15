@@ -1,36 +1,35 @@
 'use client'
 //react
 import React, { useEffect, useRef, useState } from 'react'
+import Link from 'next/link'
 
 //icons
 import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa'
 import { MdEmail } from 'react-icons/md'
+
+//pages
 import About from '../componentes/about'
 import Projects from '../componentes/projects'
-import Link from 'next/link'
 import Contact from '../componentes/contact'
 
 const Home = () => {
 
-    const scrollRef = useRef(null); // Create a reference for the scroll position
-    const [scrollYPosition, setScrollYPosition] = useState(0); // State to store scroll position
+    const scrollRef = useRef(null); 
+    const [scrollYPosition, setScrollYPosition] = useState(0); 
 
     useEffect(() => {
         const updateScrollPosition = () => {
-            const scrollY = window.scrollY || document.documentElement.scrollTop; // Get scroll position
+            const scrollY = window.scrollY || document.documentElement.scrollTop; 
             setScrollYPosition(scrollY);
             console.log(scrollYPosition)
         };
-
         window.addEventListener('scroll', updateScrollPosition);
-
         return () => window.removeEventListener('scroll', updateScrollPosition);
     }, [scrollYPosition])
 
     return (
         <>
             <main ref={scrollRef} >
-
                 <div className={`bg-[rgba(173,184,239,0.5)] duration-200 md:hidden md:static fixed ${scrollYPosition > 20 ? 'top-0' : '-top-96'} left-0 right-0 flex items-center justify-start z-40 p-2 pl-7 text-white`} >
                     {
                         scrollYPosition > 719 ? (
@@ -95,11 +94,7 @@ const Home = () => {
                     <div className='md:w-2/4 text-[var(--cinza)] md:flex items-center justify-start my-5' >
                         <Contact />
                     </div>
-
                 </div>
-
-
-
             </main >
         </>
     )

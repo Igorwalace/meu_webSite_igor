@@ -1,4 +1,7 @@
+//react
 import React from 'react'
+
+//pages
 import Home from './pages/home'
 
 const Page = () => {
