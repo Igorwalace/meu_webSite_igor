@@ -52,7 +52,7 @@ const Contact = () => {
             <main>
                 <div className="py-3" >
                     <h1 className="md:text-base text-sm text-white" >Deseja entrar em contato comigo?</h1>
-                    <span className="md:text-[13px] text-[11px] font-light text-[var(--cinza)] w-3/4" >Você pode me mnadar uma mensagem em umas das redes, ou me enviar um email abaixo.</span>
+                    <span className="md:text-[13px] text-[11px] font-light text-[var(--cinza)] w-3/4" >Você pode me mandar uma mensagem em umas das redes, ou me enviar um email abaixo.</span>
                 </div>
                 <form className='flex items-center justify-start flex-col gap-3' onSubmit={handleSubmitForm} >
                     <input
