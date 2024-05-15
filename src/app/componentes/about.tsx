@@ -5,7 +5,7 @@ const About = () => {
         <>
             <div className='' >
                 <div className="pb-3" >
-                    <h1 className="md:text-base text-sm text-white" >Sobre mim</h1>
+                    <h1 className="md:text-base text-base text-white" >Sobre mim</h1>
                 </div>
                 <p className='text-justify md:text-[15px] text-sm' >
                     meu nome é <span className='text-white' >Igor Wallace</span>, tenho 18 anos. apaixonado por tecnologia e

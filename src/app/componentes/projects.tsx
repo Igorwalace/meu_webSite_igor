@@ -36,7 +36,7 @@ const Projects = () => {
     return (
         <>
             <div className='w-full' >
-                <h1 className="md:text-base text-sm mb-3 text-white" >Meus Projetos</h1>
+                <h1 className="md:text-base text-base mb-3 text-white" >Meus Projetos</h1>
                 <div className='grid grid-cols-2 gap-3 w-full' >
                     {
                         projectList.length < 1 &&
