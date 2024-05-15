@@ -47,24 +47,13 @@ const Project_single = ({ isProjectSingle, setIsProjectSingle, sendProject }: Pr
                             </div>
 
                             <div className="py-3">
-                                {
-                                    sendProject.gif ?
-                                        <Image
-                                            className='w-full h-full rounded-md'
-                                            src={sendProject.gif}
-                                            alt={sendProject.title}
-                                            width={300}
-                                            height={300}
-                                        />
-                                        :
-                                        <Image
-                                            className='w-full h-full rounded-md'
-                                            src={sendProject.imgUrl}
-                                            alt={sendProject.title}
-                                            width={300}
-                                            height={300}
-                                        />
-                                }
+                                <Image
+                                    className='w-full h-full rounded-md'
+                                    src={sendProject.imgUrl}
+                                    alt={sendProject.title}
+                                    width={300}
+                                    height={300}
+                                />
                             </div>
 
                             <div className="py-3" >
