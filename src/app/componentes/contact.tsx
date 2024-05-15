@@ -54,7 +54,7 @@ const Contact = () => {
                     <h1 className="md:text-base text-sm text-white" >Deseja entrar em contato comigo?</h1>
                     <span className="md:text-[13px] text-[11px] font-light text-[var(--cinza)] w-3/4" >Você pode me avisar mensagem em umas das redes, ou me enviar um email abaixo.</span>
                 </div>
-                <form className='flex items-center justify-center flex-col gap-3' onSubmit={handleSubmitForm} >
+                <form className='flex items-center justify-start flex-col gap-3' onSubmit={handleSubmitForm} >
                     <input
                         type="text"
                         className='w-full bg-transparent border-[1px] border-[var(--cinza)] rounded-md outline-none p-2 placeholder:text-sm md:text-sm text-xs'
