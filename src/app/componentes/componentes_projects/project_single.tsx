@@ -47,13 +47,24 @@ const Project_single = ({ isProjectSingle, setIsProjectSingle, sendProject }: Pr
                             </div>
 
                             <div className="py-3">
-                                <Image
-                                    className='w-full h-full rounded-md'
-                                    src={sendProject.imgUrl}
-                                    alt={sendProject.title}
-                                    width={300}
-                                    height={300}
-                                />
+                                {
+                                    sendProject.banner ?
+                                        <Image
+                                            className='w-full h-full rounded-md'
+                                            src={sendProject.banner}
+                                            alt={sendProject.title}
+                                            width={300}
+                                            height={300}
+                                        />
+                                        :
+                                        <Image
+                                            className='w-full h-full rounded-md'
+                                            src={sendProject.imgUrl}
+                                            alt={sendProject.title}
+                                            width={300}
+                                            height={300}
+                                        />
+                                }
                             </div>
 
                             <div className="py-3" >
@@ -63,7 +74,7 @@ const Project_single = ({ isProjectSingle, setIsProjectSingle, sendProject }: Pr
 
                             <div className="py-3" >
                                 <h1 className="md:text-base text-sm" >WebSite</h1>
-                                <Link href={sendProject.url} className="md:text-sm underline text-xs font-light text-[var(--cinza)]" >{sendProject.url}</Link>
+                                <Link href={sendProject.url} target='_blank' className="md:text-sm underline text-xs font-light text-[var(--cinza)]" >{sendProject.url}</Link>
                             </div>
 
                             <div className="py-3" >
