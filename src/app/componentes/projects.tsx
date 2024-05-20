@@ -51,7 +51,6 @@ const Projects = () => {
                                         <div className='md:h-[140px] w-full h-[100px] rounded-xl bg-slate-100 flex items-center justify-center' id='imageLoading'>
                                             <span className="loader"></span>
                                         </div>
-                                        <div className='md:h-[30px] w-full h-[20px] rounded-xl bg-slate-100 text-black flex justify-center items-center' id='imageLoading'>Carregando projeto..</div>
                                     </div>
                                 </>
                             ))
