@@ -14,7 +14,7 @@ const About = () => {
                     buscando aprimorar meus conhecimentos e habilidades na área.
                     <br></br>
                     <br></br>
-                    hoje, me encontro com mais de 1 ano de experiência na área de Desenvolvedor. apesar da pouca experiência, já possuo alguns projetos pessoais que
+                    hoje, me encontro com mais de 1 ano de experiência na área de Desenvolvedor. apesar da pouca experiência, já possuo projetos pessoais que
                     demonstram ainda mais meus <span className='text-white' >conhecimentos</span>.
                     <br></br>
                     <br></br>
