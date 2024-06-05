@@ -14,9 +14,9 @@ const About = () => {
                     buscando aprimorar meus conhecimentos e habilidades na área.
                     <br></br>
                     <br></br>
-                    hoje, encontro-me em busca de minha primeira experiência profissional na área de desenvolvimento
-                    de software. apesar da pouca experiência formal, já possuo alguns projetos pessoais que
-                    demonstram meus <span className='text-white' >conhecimentos</span>.
+                    hoje, me encontro com quase 1 ano de experiência profissional na área de desenvolvimento
+                    de software. apesar da pouca experiência, já possuo alguns projetos pessoais que
+                    demonstram ainda mais meus <span className='text-white' >conhecimentos</span>.
                     <br></br>
                     <br></br>
                     {/* meu maior sonho é conseguir morar nos EUA e
