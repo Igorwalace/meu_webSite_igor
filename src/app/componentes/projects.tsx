@@ -43,16 +43,14 @@ const Projects = () => {
                         loading
                             .slice(0, 3)
                             .map((number: number, index: any) => (
-                                <>
-                                    <div
-                                        className='flex flex-col items-center justify-center gap-2 w-full'
-                                        key={index}
-                                    >
-                                        <div className='md:h-[140px] w-full h-[100px] rounded-xl bg-slate-100 flex items-center justify-center' id='imageLoading'>
-                                            <span className="loader"></span>
-                                        </div>
+                                <div
+                                    className='flex flex-col items-center justify-center gap-2 w-full'
+                                    key={index}
+                                >
+                                    <div className='md:h-[140px] w-full h-[100px] rounded-xl bg-slate-100 flex items-center justify-center' id='imageLoading'>
+                                        <span className="loader"></span>
                                     </div>
-                                </>
+                                </div>
                             ))
                     }
                     {
