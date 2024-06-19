@@ -14,12 +14,15 @@ import Contact from '../componentes/contact'
 
 const Home = () => {
 
-    const scrollRef = useRef(null); 
-    const [scrollYPosition, setScrollYPosition] = useState(0); 
+    const scrollRef = useRef(null);
+    const [scrollYPosition, setScrollYPosition] = useState(0);
+
+    const linkApp = 'https://expo.dev/artifacts/eas/8YKgMskwTbaBS6L3UppdoV.apk'
+    const IsAndroid = navigator.userAgent.includes('android')
 
     useEffect(() => {
         const updateScrollPosition = () => {
-            const scrollY = window.scrollY || document.documentElement.scrollTop; 
+            const scrollY = window.scrollY || document.documentElement.scrollTop;
             setScrollYPosition(scrollY);
         };
         window.addEventListener('scroll', updateScrollPosition);
@@ -49,6 +52,9 @@ const Home = () => {
                         <div>
                             <h3 className='md:text-lg text-base' >Desenvolvedor Front-End</h3>
                             <h1 className='md:text-sm text-xs text-[var(--cinza)] max-w-[70%]' >Dou vida à projetos, construindo coisas legais na internet.</h1>
+                        </div>
+                        <div className='pt-3' >
+                            <h3 className='text-sm max-w-[70%] md:max-w-[70%]' >Você também pode instalar o app deste site clicando<Link className='text-[var(--cinza)]' href={`${IsAndroid ? linkApp : '/'}`} > aqui </Link>(apenas para Android).</h3>
                         </div>
                     </div>
                     <div className='hidden md:block md:my-32 my-5 md:text-base text-sm text-[var(--cinza)]' >
