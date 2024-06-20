@@ -17,16 +17,9 @@ const Home = () => {
     const scrollRef = useRef(null);
     const [scrollYPosition, setScrollYPosition] = useState(0);
 
-    const [isAndroid, setIsAndroid] = useState(false);
-
     const linkApp = 'https://expo.dev/artifacts/eas/8YKgMskwTbaBS6L3UppdoV.apk'
 
     useEffect(() => {
-
-        const userAgent = navigator.userAgent;
-        if (userAgent.includes('android')) {
-            setIsAndroid(true);
-        }
 
         const updateScrollPosition = () => {
             const scrollY = window.scrollY || document.documentElement.scrollTop;
@@ -62,7 +55,7 @@ const Home = () => {
                             <h1 className='md:text-sm text-xs text-[var(--cinza)] max-w-[70%]' >Dou vida à projetos, construindo coisas legais na internet.</h1>
                         </div>
                         <div className='pt-3' >
-                            <h3 className='text-sm max-w-[70%] md:max-w-[70%]' >Você também pode instalar o app deste site clicando<Link className='text-[var(--cinza)]' href={`${isAndroid ? linkApp : '/'}`} > aqui </Link>(apenas para Android).</h3>
+                            <h3 className='text-sm max-w-[70%] md:max-w-[70%]' >Você também pode instalar o app deste site clicando<Link className='text-[var(--cinza)]' href={linkApp} > aqui </Link>(apenas para Android).</h3>
                         </div>
                     </div>
                     <div className='hidden md:block md:my-32 my-5 md:text-base text-sm text-[var(--cinza)]' >
