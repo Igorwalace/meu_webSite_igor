@@ -55,7 +55,7 @@ const Home = () => {
                             <h1 className='md:text-sm text-xs text-[var(--cinza)] md:ma-w-[80%] max-w-[90%]' >Dou vida à projetos, construindo coisas legais na internet.</h1>
                         </div>
                         <div className='pt-3' >
-                            <h3 className='text-sm max-w-[90%] md:max-w-[70%]' >Você também pode instalar o app deste site clicando<Link className='text-[var(--cinza)]' href={linkApp} > aqui </Link>(apenas para Android).</h3>
+                            <h3 className='text-sm max-w-[90%] md:max-w-[70%]' >Você também pode baixar o app deste site clicando<Link className='text-[var(--cinza)]' href={linkApp} > aqui </Link>(apenas para Android).</h3>
                         </div>
                     </div>
                     <div className='hidden md:block md:my-32 my-5 md:text-base text-sm text-[var(--cinza)]' >
