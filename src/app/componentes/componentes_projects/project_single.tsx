@@ -72,6 +72,14 @@ const Project_single = ({ isProjectSingle, setIsProjectSingle, sendProject }: Pr
                                 <span className="md:text-sm text-xs font-light text-[var(--cinza)]" >{sendProject.Technologies_used}</span>
                             </div>
 
+                            {
+                                sendProject.app &&
+                                <div className="py-3" >
+                                    <h1 className="md:text-base text-sm" >App</h1>
+                                    <Link href={sendProject.app} className="md:text-sm text-xs font-light text-[var(--cinza)]" >Baixar Aplicativo</Link>
+                                </div>
+                            }
+
                             <div className="py-3" >
                                 <h1 className="md:text-base text-sm" >WebSite</h1>
                                 <Link href={sendProject.url} target='_blank' className="md:text-sm underline text-xs font-light text-[var(--cinza)]" >{sendProject.url}</Link>
