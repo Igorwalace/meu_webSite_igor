@@ -87,7 +87,7 @@ const Project_single = ({ isProjectSingle, setIsProjectSingle, sendProject }: Pr
 
                             <div className="py-3" >
                                 <h1 className="md:text-base text-sm" >Código</h1>
-                                <Link href={sendProject.url} className="md:text-sm underline text-xs font-light text-[var(--cinza)]" >{sendProject.GitHub}</Link>
+                                <Link href={sendProject.GitHub} target='_blank' className="md:text-sm underline text-xs font-light text-[var(--cinza)]" >{sendProject.GitHub}</Link>
                             </div>
 
                         </div>
