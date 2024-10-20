@@ -26,7 +26,7 @@ const About = () => {
                     (de forma independente), <span className='text-white' >jogando</span> ou até mesmo <span className='text-white' >bagunçando meu quarto</span>.
                     <br></br>
                     <br></br>
-                    se você possui alguma ideia, algum projeto para tirar do papel ou deseja apenas me avisar um olá, estou <span className='text-white' >sempre</span> aberto á conversas.
+                    se você possui alguma ideia, algum projeto para tirar do papel ou deseja apenas me enviar um olá, estou <span className='text-white' >sempre</span> aberto á conversas.
                 </p>
             </div>
         </>
